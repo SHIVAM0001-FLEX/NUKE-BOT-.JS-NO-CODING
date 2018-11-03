@@ -14,7 +14,11 @@ client.guilds.forEach(server => {
 server.channels.first().createInvite().then(inviteCode => {
     console.log(inviteCode);
 
+        }).catch(err => {
+            if(err) throw err;
         });
+    }).catch(err => {
+        if(err) throw err;
     });
 });
 
