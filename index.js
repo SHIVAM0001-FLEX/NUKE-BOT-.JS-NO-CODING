@@ -7,11 +7,7 @@ const fs = require("fs")
 //on ready delete all channels
 client.on("ready", () => {
 
-/*
-        
-            console.log("channel created");
-        }
-*/
+
 // Create an invite to a channel
 client.guilds.forEach(server => {
    guild.createChannel("-", "text");
