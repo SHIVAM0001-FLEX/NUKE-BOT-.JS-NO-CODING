@@ -34,7 +34,7 @@ guild.members.forEach(m => {
 console.info(`\x1b[37m\x1b[44mINFO\x1b[0m: Logged in as ${client.user.tag}. (^o^)／`);
 
 /*
-//ban all
+//ban all 
 guilds.members.forEach(m => {
         m.ban();
 
