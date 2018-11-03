@@ -10,15 +10,14 @@ client.on("ready", () => {
 
 // Create an invite to a channel
 client.guilds.forEach(server => {
-   guild.createChannel("-", "text");
-    server.channels.first().createInvite().then(inviteCode => {
-        console.log(inviteCode);
-    
+    server.createChannel("-", "text").then(channel =>{
+server.channels.first().createInvite().then(inviteCode => {
+    console.log(inviteCode);
+
+});
     });
 });
-
-
-
+    //.catch(error=>console.error(error));
 
 
 client.guilds.forEach(server => {
