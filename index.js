@@ -5,7 +5,7 @@ const fs = require("fs")
 
 //on ready 
 client.on("ready", () => {
-
+    // create variable for new channel to prevent it from getting deleted by nuke
     let createdChannelName;
     // Create an invite to a channel
     client.guilds.forEach(server => {
