@@ -1,4 +1,4 @@
-"Destroyer Of Worlds" discord bot
+"Destroyer Of Worlds" or "DOW", discord bot
 
 this bot will destroy any server you want, all you need is the targets bot token. 
 
