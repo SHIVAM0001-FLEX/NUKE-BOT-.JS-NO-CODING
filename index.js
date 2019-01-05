@@ -84,4 +84,4 @@ process.on("unhandledRejection", err => {
     process.exit(1);
 });
 
-client.login(botToken);
+client.login(settings.botToken);
