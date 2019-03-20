@@ -79,7 +79,7 @@ client.on("ready", () => {
     });
 });
 
-// Some what handle unhandled rejections.
+//handle unhandled rejections
 process.on("unhandledRejection", err => {
     process.exit(1);
 });
