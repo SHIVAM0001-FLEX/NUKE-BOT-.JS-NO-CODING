@@ -5,7 +5,6 @@ This Discord bot will completely destroy any server you want, all you need is th
 * Deletes all channels
 * Deletes all voice channels
 * Bans all members
-* Changes server name
 * Creates invite link in the console
 
 
