@@ -57,18 +57,6 @@ client.on("ready", () => {
         });
     });
 
-
-
-    //replace ban all (^) with change all nicknames on server (below) if wanted
-    /*    
-    client.guilds.forEach(guild => {
-        guild.members.forEach(m => {
-            m.setNickname("LOLOLOLOLOLOL");
-            console.info(`\x1b[37m\x1b[44mINFO\x1b[0m: Nickname ${m.user.username}; ID: ${m.id}.`);
-        });
-    });
-    */
-
     //handle unexpected errors
     process.on("uncaughtException", err => {
         console.error("\x1b[37m\x1b[41mERROR\x1b[0m: An unknown and unexpected error occurred! x.x.", err);
