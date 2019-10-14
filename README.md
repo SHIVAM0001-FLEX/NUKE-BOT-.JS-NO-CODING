@@ -19,10 +19,11 @@ This discord bot will destroy any and all servers that the bot is connected to a
 Requires a working version of Node-JS. See the [DOW Wiki](https://github.com/goldentg/DOW/wiki/Getting-Started) for a complete walkthrough of how to get started
 
 ### - Discord -
-Make sure to join our discord servers
-[DOW and SHADOW server](https://discord.gg/6mw7AGH)
+Make sure to join our discord servers!
 
-[Golden Codex Casual](https://discord.gg/SKEcRhw)
+* [DOW and SHADOW server](https://discord.gg/6mw7AGH)
+
+* [Golden Codex Casual](https://discord.gg/SKEcRhw)
 Message GoldenCodex#4546 for bot assistance
 
 ### - Support The Project - 
