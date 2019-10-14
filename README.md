@@ -24,6 +24,7 @@ Make sure to join our discord servers!
 * [DOW and SHADOW server](https://discord.gg/6mw7AGH)
 
 * [Golden Codex Casual](https://discord.gg/SKEcRhw)
+
 Message GoldenCodex#4546 for bot assistance
 
 ### - Support The Project - 
