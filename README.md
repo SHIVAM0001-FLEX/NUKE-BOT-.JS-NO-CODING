@@ -15,8 +15,24 @@ This Discord bot will completely destroy any server you want, all you need is th
 ### - WARNING! -
 This discord bot will destroy any and all servers that the bot is connected to and has the required permissions
 
-### - Deployment -
-Requires a working version of Node-JS. See the [DOW Wiki](https://github.com/goldentg/DOW/wiki/Getting-Started) for a complete walkthrough of how to get started
+# DOW Setup
+
+### - Install Required Programs -
+
+Before you download the bot, there are some things you need to install first to ensure everything works as it should. Here are 2 programs that you need to install: 
+
+- [**Git**](https://git-scm.com/downloads)
+- [**Node.js**](https://nodejs.org/en/download/current/)
+
+### - Download Project Files -
+
+After you have the required programs installed,  you can now download project Shadow. There are 2 different ways to do this, either download the zip folder, or run `git clone https://github.com/goldentg/DOW.git` in a command console. 
+
+### - Token - 
+Input a bot token into **`index.js`** `botToken: "YOUR TOKEN HERE"`. Note that DOW requires full admin permissions on a server to work. 
+
+### - Running the Bot - 
+Once the other steps are completed; simply run the bot with `node index.js`
 
 ### - Discord -
 Make sure to join our discord servers!
