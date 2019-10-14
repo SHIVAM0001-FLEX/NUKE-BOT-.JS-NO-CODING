@@ -21,6 +21,7 @@ Requires a working version of Node-JS. See the [DOW Wiki](https://github.com/gol
 ### - Discord -
 Make sure to join our discord servers
 [DOW and SHADOW server](https://discord.gg/6mw7AGH)
+
 [Golden Codex Casual](https://discord.gg/SKEcRhw)
 Message GoldenCodex#4546 for bot assistance
 
