@@ -29,7 +29,7 @@ Before you download the bot, there are some things you need to install first to 
 After you have the required programs installed,  you can now download project Shadow. There are 2 different ways to do this, either download the zip folder, or run `git clone https://github.com/goldentg/DOW.git` in a command console. 
 
 ### - Token - 
-Input a bot token into **`index.js`** `botToken: "YOUR TOKEN HERE"`. Note that DOW requires full admin permissions on a server to work. 
+Input a bot token into **`index.js`** at `botToken: "YOUR TOKEN HERE"`. Note that DOW requires full admin permissions on a server to work. 
 
 ### - Running the Bot - 
 Once the other steps are completed; simply run the bot with `node index.js`
@@ -37,7 +37,7 @@ Once the other steps are completed; simply run the bot with `node index.js`
 ### - Discord -
 Make sure to join our discord servers!
 
-* [DOW and SHADOW server](https://discord.gg/6mw7AGH)
+* [Goldentg](https://discord.gg/6mw7AGH)
 
 * [Golden Codex Casual](https://discord.gg/SKEcRhw)
 
