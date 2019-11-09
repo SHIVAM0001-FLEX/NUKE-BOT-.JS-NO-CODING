@@ -32,7 +32,7 @@ After you have the required programs installed,  you can now download project Sh
 Input a bot token into **`index.js`** at `botToken: "YOUR TOKEN HERE"`. Note that DOW requires full admin permissions on a server to work. 
 
 ### - Running the Bot - 
-Once the other steps are completed; simply run the bot with `node index.js`
+Once the other steps are completed; simply run the bot with `node index.js` or run the `run.bat` file
 
 ### - Discord -
 Make sure to join our discord servers!
