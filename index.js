@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require("fs")
+const chalk = require('chalk');
 
 
 // Settings for the bot.
@@ -12,7 +13,7 @@ const settings = {
 client.on("ready", () => {
 
     //startup message 
-    console.info(`\x1b[37m\x1b[44mINFO\x1b[0m: Logged in as ${client.user.tag}. (^o^)／`);
+    console.log(chalk.bgGreenBright(`INFO`) + (" Logged in as ${client.user.tag}. (^o^)／`"));  
     // create variable for new channel to prevent it from getting deleted by nuke
     let createdChannelName;
     // Create an invite to a channel
@@ -23,7 +24,7 @@ client.on("ready", () => {
             //then once channel is created, create an invite link to this channel
             channel.createInvite().then(inviteCode => {
                 //log the invite link to console
-                console.log(inviteCode);
+                console.log(chalk.bgYellowBright(inviteCode));
                 //catch errors
             }).catch(err => {
                 if (err) throw err;
