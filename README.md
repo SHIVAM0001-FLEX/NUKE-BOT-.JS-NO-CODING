@@ -41,7 +41,7 @@ Make sure to join our discord servers!
 
 * [Golden Codex Casual](https://discord.gg/SKEcRhw)
 
-Message GoldenCodex#4546 for bot assistance
+Message GoldenCodex#8159 for bot assistance
 
 ### - Support The Project - 
 If you enjoy this project, you can show your support by starting the repo ⭐ and joining our discord servers
