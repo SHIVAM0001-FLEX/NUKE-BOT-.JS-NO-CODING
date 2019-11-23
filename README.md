@@ -35,13 +35,11 @@ Input a bot token into **`index.js`** at `botToken: "YOUR TOKEN HERE"`. Note tha
 Once the other steps are completed; simply run the bot with `node index.js` or run the `run.bat` file
 
 ### - Discord -
-Make sure to join our discord servers!
+Make sure to join our discord server!
 
-* [Goldentg](https://discord.gg/6mw7AGH)
+* [Golden Codex](https://discord.gg/rqx7yBy)
 
-* [Golden Codex Casual](https://discord.gg/SKEcRhw)
-
-Message GoldenCodex#4546 for bot assistance
+Message GoldenCodex#8159 for bot assistance
 
 ### - Support The Project - 
 If you enjoy this project, you can show your support by starting the repo ⭐ and joining our discord servers
