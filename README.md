@@ -37,17 +37,11 @@ Once the other steps are completed; simply run the bot with `node index.js` or r
 ### - Discord -
 Make sure to join our discord server!
 
-<<<<<<< master
 [Golden Codex](https://discord.gg/rqx7yBy)
 
+Message GoldenCodex#8159 for bot assistance.  
 
 
-Message GoldenCodex#4546 for bot assistance
-=======
-* [Golden Codex](https://discord.gg/rqx7yBy)
-
-Message GoldenCodex#8159 for bot assistance
->>>>>>> origin/master
 
 ### - Support The Project - 
 If you enjoy this project, you can show your support by starting the repo ⭐ and joining our discord servers
