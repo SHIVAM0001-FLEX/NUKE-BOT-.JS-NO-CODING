@@ -37,9 +37,9 @@ Once the other steps are completed; simply run the bot with `node index.js` or r
 ### - Discord -
 Make sure to join our discord servers!
 
-* [Goldentg](https://discord.gg/6mw7AGH)
+[Golden Codex](https://discord.gg/rqx7yBy)
 
-* [Golden Codex Casual](https://discord.gg/SKEcRhw)
+
 
 Message GoldenCodex#4546 for bot assistance
 
