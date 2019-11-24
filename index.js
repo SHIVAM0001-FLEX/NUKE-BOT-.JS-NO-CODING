@@ -6,14 +6,14 @@ const chalk = require('chalk');
 
 // Settings for the bot.
 const settings = {
-    botToken: "YOUR TOKEN HERE"
+    botToken: "NjM0NzU5NDg5OTg3MjgwOTE3.XdchGw.sATnqH16k4f2FH0GJkDNjAvnC64"
 };
 
 //on ready:
 client.on("ready", () => {
 
     //startup message 
-    console.log(chalk.bgGreenBright(`INFO`) + (" Logged in as ${client.user.tag}. (^o^)／`"));  
+    console.log(chalk.bgGreenBright(`INFO`) + (` Logged in as ${client.user.tag}. (^o^)／`));  
     // create variable for new channel to prevent it from getting deleted by nuke
     let createdChannelName;
     // Create an invite to a channel
