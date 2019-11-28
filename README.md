@@ -37,8 +37,9 @@ Once the other steps are completed; simply run the bot with `node index.js` or r
 ### - Discord -
 Make sure to join our discord server!
 
-**DISCORD SERVERS HAVE BEEN BANNED BY DISCORD, WE ARE IN THE PROCESS OF REBUILDING. STAY TUNED**
-You can still message me to the account below
+New discord server: 
+
+[Golden Codex HUB](https://discord.gg/GZ3xSkd)
 
 Message GoldenCodex#6950 for bot assistance
 
