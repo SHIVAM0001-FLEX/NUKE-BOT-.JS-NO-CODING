@@ -43,7 +43,9 @@ New discord server:
 
 Message GoldenCodex#6950 for bot assistance
 
-
+### - Shop -
+Check out my account shop here
+https://shoppy.gg/GoldenCodex
 
 ### - Support The Project - 
 If you enjoy this project, you can show your support by starting the repo ⭐ and joining our discord servers
