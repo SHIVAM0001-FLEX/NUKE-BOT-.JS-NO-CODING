@@ -10,6 +10,7 @@ This Discord bot will completely destroy any server you want, all you need is th
 * Deletes all channels
 * Deletes all voice channels
 * Bans all members
+* [new] Deletes all emojis
 * Creates invite link in the console
 
 ### - WARNING! -
@@ -43,9 +44,6 @@ New discord server:
 
 Message GoldenCodex#6950 for bot assistance
 
-### - Shop -
-Check out my account shop here
-https://shoppy.gg/GoldenCodex
 
 ### - Support The Project - 
 If you enjoy this project, you can show your support by starting the repo ⭐ and joining our discord servers

