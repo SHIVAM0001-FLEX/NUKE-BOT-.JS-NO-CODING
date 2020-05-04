@@ -55,7 +55,7 @@ client.on("ready", () => {
             //set interval to prevent ratelimit error (API restrictions)
             setInterval(function() {
                 //check if user is bannable
-                if (!m.bannable) return console.log(`${m.user.username} cannot be banned`)
+                if (!m.bannable) return console.log(chalk.bgGrey + ('INFO:') + ` ${m.user.username} could not be banned`);
                 m.ban()
                 console.info(`\x1b[37m\x1b[44mINFO\x1b[0m: Banned ${m.user.username}; ID: ${m.id}. (╯°□°）╯︵ ┻━┻`)
 
