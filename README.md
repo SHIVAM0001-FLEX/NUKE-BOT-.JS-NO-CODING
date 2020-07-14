@@ -60,3 +60,4 @@ If you enjoy this project, you can show your support by starting the repo ⭐ an
 I've worked hard to code this bot hopefully you will show me some support, even if I don't get donations. That said, I know there are people out there that may still want to donate just to show their appreciation so this is for you guys. Thanks in advance!
 
 [**Donate Here!**](https://www.paypal.me/EvanNorman) ☕
+[**SUPPORT OUR GAME STUDIO**](https://tranimumgames.com)
