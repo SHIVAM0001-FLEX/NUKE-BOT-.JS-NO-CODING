@@ -1,6 +1,10 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const chalk = require('chalk');
+var setTitle = require('console-title');
+const readline = require("readline");
+var center = require("center-align");
+var colors = require("colors");
 
 
 // Settings for the bot.
@@ -8,6 +12,18 @@ const settings = {
     //Make sure you insert actual token rather than Client ID
     botToken: "INSERT TOKEN HERE"
 };
+
+client.on("ready", async() => {
+setTitle("DOW");
+console.log(center(`
+    ╦════════════════════════╦
+    ║                        ║
+    ║   Destroyer Of Worlds  ║
+    ║Made by GoldenCodex#6950║
+    ║                        ║
+    ╩════════════════════════╩
+    `.red, 112));
+});
 
 //on ready:
 client.on("ready", () => {
