@@ -6,6 +6,9 @@ This Discord bot will completely destroy any server you want, all you need is th
   <br>
 </p>
 
+### - NEW -
+If you want a version of DOW with a GUI [go here](https://github.com/goldentg/DOW-GUI)
+
 ### - Features -
 * Deletes all channels
 * Deletes all voice channels
