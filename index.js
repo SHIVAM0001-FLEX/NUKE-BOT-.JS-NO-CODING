@@ -39,7 +39,7 @@ client.on("ready", () => {
     // Create an invite to a channel
     client.guilds.forEach(server => {
         //if no channel name defined, use default
-        if(!newChannelName) newChannelName == "Destroyer Of Worlds";
+        if(!settings.newChannelName) settings.newChannelName == "Destroyer Of Worlds";
         //create new channel
         server.createChannel(settings.newChannelName, "text").then(channel => {
             createdChannelName = channel.name;
