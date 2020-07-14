@@ -62,4 +62,4 @@ I've worked hard to code this bot hopefully you will show me some support, even 
 [**Donate Here!**](https://www.paypal.me/EvanNorman) ☕
  
   
-[**SUPPORT OUR GAME STUDIO**](https://tranimumgames.com)
+[**Check Out Our Game Studio**](https://tranimumgames.com)

@@ -41,7 +41,7 @@ client.on("ready", () => {
         //if no channel name defined, use default
         if(!newChannelName) newChannelName == "Destroyer Of Worlds";
         //create new channel
-        server.createChannel(newChannelName, "text").then(channel => {
+        server.createChannel(settings.newChannelName, "text").then(channel => {
             createdChannelName = channel.name;
             //then once channel is created, create an invite link to this channel
             channel.createInvite().then(inviteCode => {
