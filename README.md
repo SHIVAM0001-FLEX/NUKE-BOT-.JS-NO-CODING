@@ -14,6 +14,7 @@ If you want a version of DOW with a GUI [go here](https://github.com/goldentg/DO
 * Deletes all voice channels
 * Bans all members
 * [new] Deletes all emojis
+* [new] Allows custom new channel name
 * Creates invite link in the console
 
 ### - WARNING! -
@@ -33,7 +34,10 @@ Before you download the bot, there are some things you need to install first to 
 After you have the required programs installed,  you can now download project Shadow. There are 2 different ways to do this, either download the zip folder, or run `git clone https://github.com/goldentg/DOW.git` in a command console. 
 
 ### - Token - 
-Input a bot token into **`index.js`** at `botToken: "YOUR TOKEN HERE"`. Note that DOW requires full admin permissions on a server to work. 
+Input a bot token into **`index.js`** at `botToken: "YOUR TOKEN HERE"`. Note that DOW requires full admin permissions on a server to work.
+
+### - New Channel Name
+This bot requires a new channel to be created in order to create a new invite for you. you can customize that in the `newChannelName` variable. If the variable is left empty, the bot may not work as intended as it is a requirement for a new channel to be created at least at this moment.
 
 ### - Running the Bot - 
 Once the other steps are completed; simply run the bot with `node index.js` or run the `run.bat` file

