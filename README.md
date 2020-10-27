@@ -49,7 +49,7 @@ New discord server:
 
 [Golden Codex HUB](https://discord.gg/GZ3xSkd)
 
-Message GoldenCodex#6950 for bot assistance
+Message BlackLung#6950 for bot assistance
 
 
 ### - Support The Project - 
