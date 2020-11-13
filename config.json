@@ -1,5 +1,10 @@
 {
     "token": "INPUT TOKEN HERE",
     "serverID": "INPUT GUILD ID HERE",
-    "newChannelName": "DOW"
+    "newChannelName": "DOW",
+    "banMembers": true,
+    "deleteChannels": true,
+    "deleteEmotes": true,
+    "commandModeToggle": false
+    
 }

